@@ -1,11 +1,13 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Church, ArrowDown } from 'lucide-react';
+import BackToHomeButton from '../components/BackToHomeButton';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <BackToHomeButton variant="arrow" position="top-left" />
+      
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
