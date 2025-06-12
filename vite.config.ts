@@ -24,9 +24,9 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      output: {
-        manualChunks: undefined
-      }
-    }
-  }
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
+  },
 }));
