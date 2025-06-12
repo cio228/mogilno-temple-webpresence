@@ -1,6 +1,5 @@
 
 import React from 'react';
-import BackToHomeButton from './BackToHomeButton';
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -12,16 +11,7 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto relative">
-        {/* Close button using our Back component style but as modal close */}
-        <button 
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600 text-white w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 group"
-          aria-label="Закрыть"
-        >
-          <span className="text-lg font-bold group-hover:rotate-90 transition-transform">×</span>
-        </button>
-        
+      <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="flex justify-between items-center p-6 border-b">
           <h2 className="text-2xl font-bold text-gray-800">Поддержать храм</h2>
