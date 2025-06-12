@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/mogilno-temple-webpresence/',
+  base: mode === 'production' ? '/mogilno-temple-webpresence/' : '/',
   server: {
     host: "::",
     port: 8080,
