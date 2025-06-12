@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Orthodox Cross */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
+            <div className="relative animate-pulse">
               <div className="w-1 h-16 bg-gradient-to-b from-yellow-400 to-yellow-600 mx-auto"></div>
               <div className="w-8 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 absolute top-4 left-1/2 transform -translate-x-1/2"></div>
               <div className="w-6 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 absolute top-8 left-1/2 transform -translate-x-1/2"></div>
@@ -22,12 +23,12 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent leading-tight">
             Храм Святого Николая
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-gray-300 mb-8 font-light">
-            в селе Могильно
+          <h2 className="text-xl md:text-3xl text-gray-300 mb-8 font-light">
+            в агрогородке Могильно
           </h2>
           
           <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-12 max-w-3xl mx-auto">
@@ -36,12 +37,18 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <Link 
+              to="/about"
+              className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
               О нашем храме
-            </button>
-            <button className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+            </Link>
+            <Link 
+              to="/services"
+              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
+            >
               Расписание служб
-            </button>
+            </Link>
           </div>
         </div>
       </div>
